@@ -19,6 +19,9 @@ class Board:
             if spot != "X" and spot != "O":
                 availSpots.append(spot)
         return availSpots
+    
+    def modifyPosition(self, val, index):
+        self.board[index] = val
 
     def drawBoard(self):
         pass
