@@ -26,4 +26,6 @@ class Board:
         lines = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
         for l in lines:
             print(str(self.board[l[0]]) + "  " + str(self.board[l[1]]) + "  " + str(self.board[l[2]]))
-
+    
+    def getBoard(self):
+        return self.board
