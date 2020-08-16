@@ -8,14 +8,18 @@ class Board:
         wins = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
         for w in wins:
             if (self.board[w[0]]=="O" and self.board[w[1]]=="O" and self.board[w[2]]=="O"):
+                self.score = -10
                 return True
+        self.score = 0
         return False
     
     def aiWin(self):
         wins = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
         for w in wins:
             if (self.board[w[0]]=="X" and self.board[w[1]]=="X" and self.board[w[2]]=="X"):
+                self.score = 10
                 return True
+        self.score = 0
         return False
 
     def availSpots(self):
