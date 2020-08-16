@@ -36,21 +36,23 @@ def movesLeft(board):
     return False
             
 
-""" function minimax(board, depth, isMaximizingPlayer):
+""" function minimax(board, isMaximizingPlayer):
 
     if current board state is a terminal state :
-        return value of the board
+        return empty move
     
     if isMaximizingPlayer :
-        bestVal = -INFINITY 
-        for each move in board :
-            value = minimax(board, depth+1, false)
-            bestVal = max( bestVal, value) 
-        return bestVal
+        bestMove = -INFINITY 
+        for each move in board:
+            make move and modify board
+            move = minimax(board, false)
+            bestMove = evalMax(bestMove, move) 
+        return bestMove
 
     else :
-        bestVal = +INFINITY 
-        for each move in board :
-            value = minimax(board, depth+1, true)
-            bestVal = min( bestVal, value) 
-        return bestVal """
+        bestMove = +INFINITY 
+        for each move in board:
+            make move and modify board
+            move = minimax(board, true)
+            bestMove = evalMin(bestMove, move) 
+        return bestMove """
