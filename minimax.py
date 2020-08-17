@@ -1,17 +1,6 @@
 from board import Board
 
 
-def evaluate():
-    print("test")
-
-
-def main():
-    evaluate()
-
-if __name__ == "__main__":
-    main()
-
-
 """ def minimax(board, isMax):
     #Base Cases
     if (len(board.availSpots()) == 0):
