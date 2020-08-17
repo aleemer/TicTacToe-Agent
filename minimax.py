@@ -1,4 +1,5 @@
 from board import Board
+from board import Move
 
 
 """ def minimax(board, isMax):
