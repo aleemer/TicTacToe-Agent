@@ -15,14 +15,6 @@ if __name__ == "__main__":
     main()
 
 
-""" function findBestMove(board):
-    bestMove = NULL
-    for each move in board :
-        if current move is better than bestMove
-            bestMove = current move
-    return bestMove """
-
-
 """ function isMovesLeft(board):
     for each cell in board:
         if current cell is empty:
@@ -35,7 +27,6 @@ def movesLeft(board):
             return True
     return False
             
-
 """ function minimax(board, isMaximizingPlayer):
 
     if current board state is a terminal state :
@@ -44,7 +35,7 @@ def movesLeft(board):
     if isMaximizingPlayer :
         bestMove = -INFINITY 
         for each move in board:
-            make move and modify board
+            make move and modify board (local copy)
             move = minimax(board, false)
             bestMove = evalMax(bestMove, move) 
         return bestMove
@@ -52,7 +43,7 @@ def movesLeft(board):
     else :
         bestMove = +INFINITY 
         for each move in board:
-            make move and modify board
+            make move and modify board (local copy)
             move = minimax(board, true)
             bestMove = evalMin(bestMove, move) 
         return bestMove """
