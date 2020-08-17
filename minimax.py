@@ -1,9 +1,6 @@
 from board import Board
 
 
-def minimax():
-    pass
-
 def evaluate():
     print("test")
 
@@ -15,35 +12,23 @@ if __name__ == "__main__":
     main()
 
 
-""" function isMovesLeft(board):
-    for each cell in board:
-        if current cell is empty:
-            return true
-    return false """
-
-def movesLeft(board):
-    for c in board.getBoard():
-        if c!="X" and c!="O":
-            return True
-    return False
-            
-""" function minimax(board, isMaximizingPlayer):
-
-    if current board state is a terminal state :
-        return empty move
+""" def minimax(board, isMax):
+    #Base Cases
+    if (len(board.availSpots()) == 0):
+        return 0
     
-    if isMaximizingPlayer :
-        bestMove = -INFINITY 
-        for each move in board:
-            make move and modify board (local copy)
-            move = minimax(board, false)
-            bestMove = evalMax(bestMove, move) 
-        return bestMove
+    if board.playerWin():
+        return 10
 
-    else :
-        bestMove = +INFINITY 
-        for each move in board:
-            make move and modify board (local copy)
-            move = minimax(board, true)
-            bestMove = evalMin(bestMove, move) 
-        return bestMove """
+    if board.aiWin():
+        return -10
+    
+    #Recursive Step(s)
+    if (isMax):
+        # Steps
+        minimax(newboard, False)
+        pass
+    else:
+        # Steps
+        minimax(newboard, True)
+        pass """
