@@ -21,6 +21,7 @@ def game():
         # ask player 1 to make move -> X
         player1Move = int(input("Enter move desired for player 1: "))
         gameBoard.modifyPosition("X", player1Move)
+        print()
         gameBoard.drawBoard()
         print()
 
@@ -29,9 +30,15 @@ def game():
             print("Player 1 has won the game!")
             return
         
+        # check for tie
+        if (not gameBoard.movesLeft()):
+            print("Draw! Neither player has won.")
+            return
+        
         # ask player 2 to make move -> X
         player2Move = int(input("Enter the move desired for player 2: "))
         gameBoard.modifyPosition("O", player2Move)
+        print()
         gameBoard.drawBoard()
         print()
 
@@ -39,7 +46,12 @@ def game():
         if (gameBoard.playerWin()):
             print("Player 2 has won the game!")
             return
+        
+        # check for tie
+        if (not gameBoard.movesLeft()):
+            print("Draw! Neither player has won.")
+            return
     
-    print("Tie! Neither player has won.")
+    print("Draw! Neither player has won.")
 
 play()
