@@ -53,3 +53,6 @@ class Move:
     
     def getScore(self):
         return self.score
+    
+    def setScore(self, score):
+        self.score = score
