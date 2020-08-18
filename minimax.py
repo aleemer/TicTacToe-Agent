@@ -75,6 +75,8 @@ def game():
     # create board
     gameBoard = Board()
     # denote players
+    gameBoard.drawBoard()
+    print()
     print("Player is denoted as O")
     print("AI is denoted as X")
     print()
@@ -85,7 +87,6 @@ def game():
         gameBoard.modifyPosition("O", player1Move)
         print()
         gameBoard.drawBoard()
-        print()
 
         # check for victory -> if yes, break
         if (gameBoard.playerWin()):
@@ -102,7 +103,6 @@ def game():
         gameBoard.modifyPosition("X", aiMove)
         print()
         gameBoard.drawBoard()
-        print()
 
         # check for victory -> if yes, break
         if (gameBoard.aiWin()):
@@ -118,3 +118,5 @@ def game():
 
 def play():
     game()
+
+play()
