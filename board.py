@@ -40,19 +40,3 @@ class Board:
     
     def getBoard(self):
         return self.board
-
-
-class Move:
-
-    def __init__(self, index, score):
-        self.index = index
-        self.score = score
-    
-    def getIndex(self):
-        return self.index
-    
-    def getScore(self):
-        return self.score
-    
-    def setScore(self, score):
-        self.score = score
