@@ -1,5 +1,4 @@
 from board import Board
-from board import Move
 
 
 def findbestMove(board):
@@ -102,6 +101,7 @@ def game():
         aiMove = findbestMove(gameBoard)
         gameBoard.modifyPosition("X", aiMove)
         print()
+        print("AI has moved to positon: " + str(aiMove))
         gameBoard.drawBoard()
 
         # check for victory -> if yes, break
